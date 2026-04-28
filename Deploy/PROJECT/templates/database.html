@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cryptocurrency </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="page-wrapper">
+    <header id="header">
+      <img id="header-img" src="data:image/png;base64,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" alt="Logo">
+      <nav id="nav-bar">
+        <ul>
+          <li><a class="nav-link" href="{% url 'Home_4' %}">Home</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+    <style>
+        /* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styles */
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+}
+
+/* Container Styles */
+.container {
+    padding-top: 90px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles (Fixed Header) */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 78px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#header-img {
+    width: 140px;
+}
+
+#nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+#nav-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-bar li {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px 40px;
+    background-color: #444;
+    color: #fff;
+}
+
+#hero h2 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+#hero p {
+    font-size: 1.2em;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.gallery img, .gallery video {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover, .gallery video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Products */
+#collections {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(33.333% - 20px);
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product h2 {
+    margin-top: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.product ol {
+    margin: 15px 0;
+}
+
+.product ol li {
+    padding: 5px 0;
+}
+
+.product button {
+    padding: 10px 20px;
+    margin: 15px 0;
+    font-size: 1em;
+    color: #fff;
+    background-color: #d0312d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #960000;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    background-color: #333;
+    color: #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 0 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+footer ul li a:hover {
+    color: #fff;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        height: 90px;
+    }
+
+    #nav-bar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #collections {
+        flex-direction: column;
+    }
+
+    .product {
+        width: 100%;
+        max-width: 375px;
+        margin: 10px auto;
+    }
+}
+
+    </style>
+    <div class="container">
+      <section id="hero">
+        <h2>Bitcoin </h2>
+      </section>
+
+      <section id="bitcoin">
+        <h2></h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Open</th>
+              <th>High</th>
+              <th>Low</th>
+              <th>Volume</th>
+              <th>Close</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for db in bitcoin_db %}
+            <tr>
+              <td>{{ db.Open }}</td>
+              <td>{{ db.High }}</td>
+              <td>{{ db.Low }}</td>
+              <td>{{ db.Volume }}</td>
+              <td>{{ db.Close }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </section>
+
+      <section id="collections">
+        <!-- Additional content here -->
+      </section>
+    </div>
+
+    
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+<html>
+  <head>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+
+    <!-- alpine.js is used for handling toggle of navbar on mobile screens, switch it with your own front end framework
+    if needed -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+    <style>
+        .gradient-text {
+          background: linear-gradient(to right, #4F46E5, #9C66FF);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      </style>
+      
+      <div class="max-w-6xl mx-auto px-2 md:px-0">
+        <div class="flex justify-between items-center py-3">
+          <!-- Logo -->
+          <div class="text-xl font-bold gradient-text">Domain</div>
+      
+          <!-- Mobile toggle icon -->
+          <div class="block md:hidden">
+            <button class="text-2xl">
+              <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+      
+          <!-- Main Menu -->
+          <div class="hidden md:flex gap-5">
+            <a href="{% url 'Home_4' %}" class="gradient-text">Home</a>
+            <a href="{% url 'bitcoin_report' %}" class="gradient-text">bitcoin_report</a>
+            <a href="{% url 'litecoin_report' %}" class="gradient-text">litecoin_report</a>
+            <a href="{% url 'stellar_report' %}" class="gradient-text">stellar_report</a>
+          </div>
+      
+          <!-- Login Button -->
+          <div class="hidden md:block">
+            <button class="flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-700 hover:to-purple-700 text-white rounded-md">
+              <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M7 10l5 5 5-5z"></path>
+                <path d="M0 0h24v24H0z" fill="none"></path>
+              </svg>
+              
+            </button>
+          </div>
+        </div>
+      
+        <!-- Mobile Menu -->
+        {% comment %} <div class="flex flex-col md:hidden gap-2 px-3 shadow-2xl py-2">
+          <a href="#" class="gradient-text">Home</a>
+          <a href="#" class="gradient-text">Carts</a>
+          <a href="#" class="gradient-text">Products</a>
+          <a href="#" class="gradient-text">About Us</a>
+          <a href="#" class="gradient-text">Login</a>
+        </div> {% endcomment %}
+      </div>
+         
+  </head>
+
+  <body>
+    <div class="py-2 bg-gray-100 text-gray-900 min-h-screen">
+
+      
+
+      <main>
+        <div id="hero" class="pt-5 lg:flex items-center">
+          <div class="px-5 sm:px-10 md:px-10 md:flex lg:block lg:w-1/2 lg:max-w-3xl lg:mr-8 lg:px-20">
+            <div class="md:w-1/2 md:mr-10 lg:w-full lg:mr-0">
+              <h1 class="text-3xl xl:text-4xl font-black md:leading-none xl:leading-tight">
+                Machine learning
+              </h1>
+              <p class="mt-4 xl:mt-2">
+                Machine learning (ML) is a branch of artificial intelligence (AI) that involves the development of algorithms and models that allow computers to learn and make decisions based on data. The primary goal of machine learning is to enable computers to learn from data without being explicitly programmed for each specific task.              </p>
+            </div>
+
+            {% comment %} <div class="flex-1">
+              <div class="relative mt-4 md:mt-0 lg:mt-4">
+                <div class="pl-4 pr-4 h-full absolute bottom-0 left-0 flex items-center">
+                  <svg class="text-gray-700 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </div>
+                <input type="text" class="w-full border bg-gray-100 px-4 py-4 text-sm tracking-wide focus:outline-none focus:shadow-outline rounded pl-12" placeholder="Type (e.g junior, senior)">
+              </div>
+              <div class="relative mt-4">
+                <div class="pl-4 pr-4 h-full absolute bottom-0 left-0 flex items-center">
+                  <svg class="text-gray-700 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" /></svg>
+                </div>
+                <input type="text" class="w-full border bg-gray-100 px-4 py-4 text-sm tracking-wide focus:outline-none focus:shadow-outline rounded pl-12" placeholder="Mountain View, California">
+              </div>
+              <div>
+                <button class="transition-all duration-300 mt-5 w-full border border-transparent rounded font-semibold tracking-wide text-sm px-5 py-4 focus:outline-none focus:shadow-outline bg-indigo-500 text-gray-100 hover:bg-indigo-600 hover:text-gray-200">Find Designers</button>
+              </div>
+            </div> {% endcomment %}
+          </div>
+          <div class="mt-6 w-full flex-1 lg:mt-0">
+            <div></div>
+            <img class="" src="data:image/jpeg;base64,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" style=height:250px />
+          </div>
+        </div>
+
+        <div class="p-5 sm:px-10 md:px-20" id="companies">
+          <div class="max-w-screen-xl mx-auto">
+            <img class="mx-auto" src="https://www.gptechblog.com/content/images/2023/07/02-machine-learning-process.png">
+          </div>
+        </div>
+
+        <div class="px-5 sm:px-10 md:px-20 lg:px-10 xl:px-20 py-8 bg-indigo-100" id="features">
+          <div class="max-w-screen-xl mx-auto">
+            <h3 class="leading-none font-black text-3xl">
+              Algorithms
+            </h3>
+
+            <div class="flex flex-col items-center flex-wrap lg:flex-row lg:items-stretch lg:flex-no-wrap lg:justify-between">
+              <div class="w-full max-w-sm mt-6 lg:mt-8 bg-gray-100 rounded shadow-lg p-12 lg:p-8 lg:mx-4 xl:p-12">
+                <div class="p-4 inline-block bg-indigo-200 rounded-lg">
+                  <svg class="text-indigo-500 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                    <line x1="9" y1="9" x2="9.01" y2="9"/>
+                    <line x1="15" y1="9" x2="15.01" y2="9"/>
+                  </svg>
+                </div>
+                <div class="mt-4 font-extrabold text-2xl tracking-wide">
+                    DecisionTreeRegressor
+                </div>
+                <div class="text-sm">
+                    DecisionTreeRegressor is a machine learning algorithm used for regression tasks. It belongs to the family of decision tree algorithms, which are versatile and powerful supervised learning methods that can perform both classification and regression tasks.
+                </div>
+              </div>
+
+              <div class="w-full max-w-sm mt-8 bg-gray-100 rounded shadow-lg p-12 lg:p-8 lg:mx-4 xl:p-12">
+                <div class="p-4 inline-block bg-green-200 rounded-lg">
+                  <svg class="text-green-500 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="1" x2="12" y2="23"/>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                  </svg>
+                </div>
+                <div class="mt-4 font-extrabold text-2xl tracking-wide">
+                    LinearRegression
+                </div>
+                <div class="text-sm">
+                    LinearRegression is a fundamental supervised learning algorithm in machine learning used for solving regression problems. Regression is a type of predictive modeling technique that estimates the relationship between a dependent variable (target) and one or more independent variables (features).
+                </div>
+              </div>
+
+              <div class="w-full max-w-sm mt-8 bg-gray-100 rounded shadow-lg p-12 lg:p-8 lg:mx-4 xl:p-12">
+                <div class="p-4 inline-block bg-red-200 rounded-lg">
+                  <svg class="text-red-500 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path xmlns="http://www.w3.org/2000/svg" d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                    <line xmlns="http://www.w3.org/2000/svg" x1="12" y1="9" x2="12" y2="13"/>
+                    <line xmlns="http://www.w3.org/2000/svg" x1="12" y1="17" x2="12.01" y2="17"/>
+                  </svg>
+                </div>
+                <div class="mt-4 font-extrabold text-2xl tracking-wide">
+                    RandomForestRegressor
+                </div>
+                <div class="text-sm">
+                    RandomForestRegressor is a supervised learning algorithm that belongs to the ensemble learning method. Specifically, it is part of the Random Forest family, which is used for regression tasks. Here's an explanation of what RandomForestRegressor is and how it works:
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+        
+
+
+      </main>
+
+      <footer class="px-5 sm:px-10 md:px-20 py-8">
+        <div class="flex flex-col items-center lg:flex-row-reverse justify-between">
+          <div class="">
+            <a class="mx-4 text-sm font-bold text-indigo-600 hover:text-indigo-800" href="{% url 'Home_4' %}">Home</a>
+            <a class="mx-4 text-sm font-bold text-indigo-600 hover:text-indigo-800" href="#">About Us</a>
+            <a class="mx-4 text-sm font-bold text-indigo-600 hover:text-indigo-800" href="#">Careers</a>
+            <!-- <a href="#">About Us</a> -->
+            <!-- <a href="#">Careers</a> -->
+          </div>
+          
+          
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
